@@ -4,5 +4,5 @@ def Display():
   Print("hello")
 
 if_name_=='main':
-Main1()
+Display
   
