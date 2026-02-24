@@ -6,19 +6,20 @@ version: 2.1
 # See: https://circleci.com/docs/guides/orchestrate/jobs-steps/#jobs-overview & https://circleci.com/docs/reference/configuration-reference/#jobs
 jobs:
   build:
-  docker:
-  - image: python
-  steps:
-  - checkout
-  - run:python Main1.py
+   docker:
+    - image: python
+ steps:
+    - checkout
+    - run:python Main1.py
   test:
-  docker:
-  - image:python
+   docker:
+    - image:python
   steps:
-  - checkout
-  - run:python Test.py
-  workflows:
+    - checkout
+    - run:python Test.py
+workflows:
   build_and_test:
-  jobs:
-  -build
+   jobs:
+    -build
+    -test
   
